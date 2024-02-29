@@ -3,7 +3,6 @@ import os
 import sys
 import autogen
 
-
 sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
 from conftest import skip_openai  # noqa: E402
 
